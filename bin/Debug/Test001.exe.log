@@ -1,0 +1,38 @@
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 14245, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F42FC (32-bit), Flags: CMdre0, Thread: 0x20AC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00419FDE in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txPlayVideo() at c:/codeblocks/mingw/include/txlib.h (14245)
+# 1 0x0041AA58 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txPlayVideo() at c:/codeblocks/mingw/include/txlib.h (14397)
+# 2 0x00403F42 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: _txCleanup() at c:/codeblocks/mingw/include/txlib.h (9106)
+# 3 0x004038AF in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: _txOnCExit() at c:/codeblocks/mingw/include/txlib.h (8918)
+# 4 0x00401284 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: __mingw_CRTStartup()
+# 5 0x004012C5 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: WinMainCRTStartup()
+# 6 0x77DD7B6E in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+# 7 0x77DD7B3E in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlGetAppContainerNamedObjectPath()
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May  1 2023 16:55:24, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 01 2023 16:55:28
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
