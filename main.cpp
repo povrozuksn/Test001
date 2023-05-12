@@ -3,6 +3,7 @@
 struct Forma
 {
     string text_question;
+    int right_answer;
     HDC pic_answer1;
     string text_answer1;
     HDC pic_answer2;
@@ -11,29 +12,48 @@ struct Forma
     string text_answer3;
 };
 
+void drawAnswer(int x, HDC pic_answer, string text_answer)
+{
+    txSelectFont("Times New Roman", 40);
+    txSetColor (TX_WHITE, 7);
+    txRectangle (x, 320, x+200, 470);
+    txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+    txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+}
+
+bool clickAnswer(int x)
+{
+    return(txMouseButtons()==1 && txMouseX()>x && txMouseX()<x+200 && txMouseY()>320 && txMouseY()<470);
+}
+
 int main()
 {
 txCreateWindow (800, 600);
 
-    Forma quest;
+    int kol_question = 3;
 
-    Forma quest1 = {"В каком городе больше жителей?",
+    Forma quest_buf;
+
+    Forma quest[kol_question];
+
+    quest[0] = {"В каком городе больше жителей?", 2,
                     txLoadImage("Картинки/Ульяновск.bmp"), "Ульяновск",
                     txLoadImage("Картинки/Москва.bmp"), "Москва",
                     txLoadImage("Картинки/Самара.bmp"), "Самара"};
 
-    Forma quest2 = {"Оружейная столица России?",
+    quest[1] = {"Оружейная столица России?", 3,
                     txLoadImage("Картинки/Псков.bmp"), "Псков",
                     txLoadImage("Картинки/Тверь.bmp"), "Тверь",
                     txLoadImage("Картинки/Тула.bmp"), "Тула"};
 
-    Forma quest3 = {"Самый северный город России?",
+    quest[2] = {"Самый северный город России?", 3,
                     txLoadImage("Картинки/Москва.bmp"), "Москва",
                     txLoadImage("Картинки/Тверь.bmp"), "Тверь",
                     txLoadImage("Картинки/Мурманск.bmp"), "Мурманск"};
 
     int n_question = 1;
-    int kol_question = 3;
+    int kol_right_answer = 0;
+    char str[50];
 
     while(n_question <= kol_question)
     {
@@ -42,53 +62,41 @@ txCreateWindow (800, 600);
         txClear();
         txBegin();
 
-        if(n_question == 1) quest = quest1;
-        else if(n_question == 2) quest = quest2;
-        else if(n_question == 3) quest = quest3;
+        quest_buf = quest[n_question - 1];
 
         //ШАБЛОН
-        txSetColor (TX_WHITE);
+        txSetColor (TX_WHITE, 1);
         txSetFillColor (TX_TRANSPARENT);
         txRectangle (10, 10, 790, 590);
         //Номер и количество вопросов
-        char str[50];
+
         sprintf(str, "Вопрос %d/%d", n_question, kol_question);
         txDrawText(0, 20, 800, 50, str);
         //Вопрос
         txSelectFont("Times New Roman", 60);
-        txDrawText(0, 0, 800, 200, quest.text_question.c_str());
+        txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
         //Ответы
-        txSelectFont("Times New Roman", 40);
-        txRectangle (50, 320, 250, 470);
-        txBitBlt(txDC(), 50, 320, 200, 150, quest.pic_answer1);
-        txDrawText(50, 500, 250, 550, quest.text_answer1.c_str());
-        txRectangle (300, 320, 500, 470);
-        txBitBlt(txDC(), 300, 320, 200, 150, quest.pic_answer2);
-        txDrawText(300, 500, 500, 550, quest.text_answer2.c_str());
-        txRectangle (550, 320, 750, 470);
-        txBitBlt(txDC(), 550, 320, 200, 150, quest.pic_answer3);
-        txDrawText(550, 500, 750, 550, quest.text_answer3.c_str());
+        drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+        drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+        drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
 
-        if( txMouseButtons() == 1 &&
-            txMouseX() > 50 && txMouseX() < 250 &&
-            txMouseY() > 320 && txMouseY() < 470)
+        if(clickAnswer(50))
         {
+            if(quest_buf.right_answer == 1) kol_right_answer ++;
             txSleep(200);
             n_question++;
         }
 
-        if( txMouseButtons() == 1 &&
-            txMouseX() > 300 && txMouseX() < 500 &&
-            txMouseY() > 320 && txMouseY() < 470)
+        if(clickAnswer(300))
         {
+            if(quest_buf.right_answer == 2) kol_right_answer ++;
             txSleep(200);
             n_question++;
         }
 
-        if( txMouseButtons() == 1 &&
-            txMouseX() > 550 && txMouseX() < 750 &&
-            txMouseY() > 320 && txMouseY() < 470)
+        if(clickAnswer(550))
         {
+            if(quest_buf.right_answer == 3) kol_right_answer ++;
             txSleep(200);
             n_question++;
         }
@@ -99,11 +107,13 @@ txCreateWindow (800, 600);
     txSetColor (TX_WHITE);
     txSetFillColor (TX_BLACK);
     txClear();
-    txDrawText(0, 0, 800, 600, "РЕЗУЛЬТАТ");
+    txDrawText(0, 0, 800, 400, "РЕЗУЛЬТАТ");
+    sprintf(str, "Количество правильных ответов %d", kol_right_answer);
+    txDrawText(0, 0, 800, 600, str);
 
-    txDeleteDC (quest.pic_answer1);
-    txDeleteDC (quest.pic_answer2);
-    txDeleteDC (quest.pic_answer3);
+    txDeleteDC (quest_buf.pic_answer1);
+    txDeleteDC (quest_buf.pic_answer2);
+    txDeleteDC (quest_buf.pic_answer3);
 
 txTextCursor (false);
 return 0;
