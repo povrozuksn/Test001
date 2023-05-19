@@ -1,4 +1,8 @@
 #include "TXLib.h"
+#include <iostream>
+#include <fstream>
+
+using namespace std;
 
 struct Forma
 {
@@ -28,32 +32,61 @@ bool clickAnswer(int x)
 
 int main()
 {
+
+setlocale(LC_ALL, "Russian");
+
 txCreateWindow (800, 600);
 
-    int kol_question = 3;
+    int kol_question = 4;
 
     Forma quest_buf;
 
     Forma quest[kol_question];
-
-    quest[0] = {"В каком городе больше жителей?", 2,
-                    txLoadImage("Картинки/Ульяновск.bmp"), "Ульяновск",
-                    txLoadImage("Картинки/Москва.bmp"), "Москва",
-                    txLoadImage("Картинки/Самара.bmp"), "Самара"};
-
-    quest[1] = {"Оружейная столица России?", 3,
-                    txLoadImage("Картинки/Псков.bmp"), "Псков",
-                    txLoadImage("Картинки/Тверь.bmp"), "Тверь",
-                    txLoadImage("Картинки/Тула.bmp"), "Тула"};
-
-    quest[2] = {"Самый северный город России?", 3,
-                    txLoadImage("Картинки/Москва.bmp"), "Москва",
-                    txLoadImage("Картинки/Тверь.bmp"), "Тверь",
-                    txLoadImage("Картинки/Мурманск.bmp"), "Мурманск"};
-
+    /*
+    quest[0] = {"В каком городе больше жителей?", 2, txLoadImage("Картинки/Ульяновск.bmp"), "Ульяновск", txLoadImage("Картинки/Москва.bmp"), "Москва", txLoadImage("Картинки/Самара.bmp"), "Самара"};
+    quest[1] = {"Оружейная столица России?", 3, txLoadImage("Картинки/Псков.bmp"), "Псков", txLoadImage("Картинки/Тверь.bmp"), "Тверь", txLoadImage("Картинки/Тула.bmp"), "Тула"};
+    quest[2] = {"Самый северный город России?", 3, txLoadImage("Картинки/Москва.bmp"), "Москва", txLoadImage("Картинки/Тверь.bmp"), "Тверь", txLoadImage("Картинки/Мурманск.bmp"), "Мурманск"};
+    quest[3] = {"Самый южный город России?", 3, txLoadImage("Картинки/Таганрог.bmp"), "Таганрог", txLoadImage("Картинки/Краснодар.bmp"), "Краснодар", txLoadImage("Картинки/Сочи.bmp"), "Сочи"};
+    */
     int n_question = 1;
     int kol_right_answer = 0;
-    char str[50];
+    char stroka[50];
+    string str;
+
+    ifstream file("Вопросы.txt");
+
+    while(file.good())
+    {
+        getline(file, str);
+
+        int pos1 = str.find(",", 0);
+        quest[0].text_question = str.substr(0, pos1-0);
+
+        int pos2 = str.find(",", pos1+1);
+        quest[0].right_answer = atoi((str.substr(pos1+1, pos2-(pos1+1))).c_str());
+
+        int pos3 = str.find(",", pos2+1);
+        quest[0].pic_answer1 = txLoadImage((str.substr(pos2+1, pos3-(pos2+1))).c_str());
+        cout << quest[0].pic_answer1 << endl;
+
+        int pos4 = str.find(",", pos3+1);
+        quest[0].text_answer1 = str.substr(pos3+1, pos4-(pos3+1));
+
+        int pos5 = str.find(",", pos4+1);
+        quest[0].pic_answer2 = txLoadImage((str.substr(pos4+1, pos5-(pos4+1))).c_str());
+
+        int pos6 = str.find(",", pos5+1);
+        quest[0].text_answer2 = str.substr(pos5+1, pos6-(pos5+1));
+
+        int pos7 = str.find(",", pos6+1);
+        quest[0].pic_answer3 = txLoadImage((str.substr(pos6+1, pos7-(pos6+1))).c_str());
+
+        int pos8 = str.find(",", pos7+1);
+        quest[0].text_answer3 = str.substr(pos7+1, pos8-(pos7+1));
+
+    }
+
+
 
     while(n_question <= kol_question)
     {
@@ -70,8 +103,8 @@ txCreateWindow (800, 600);
         txRectangle (10, 10, 790, 590);
         //Номер и количество вопросов
 
-        sprintf(str, "Вопрос %d/%d", n_question, kol_question);
-        txDrawText(0, 20, 800, 50, str);
+        sprintf(stroka, "Вопрос %d/%d", n_question, kol_question);
+        txDrawText(0, 20, 800, 50, stroka);
         //Вопрос
         txSelectFont("Times New Roman", 60);
         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
@@ -108,8 +141,8 @@ txCreateWindow (800, 600);
     txSetFillColor (TX_BLACK);
     txClear();
     txDrawText(0, 0, 800, 400, "РЕЗУЛЬТАТ");
-    sprintf(str, "Количество правильных ответов %d", kol_right_answer);
-    txDrawText(0, 0, 800, 600, str);
+    sprintf(stroka, "Количество правильных ответов %d", kol_right_answer);
+    txDrawText(0, 0, 800, 600, stroka);
 
     txDeleteDC (quest_buf.pic_answer1);
     txDeleteDC (quest_buf.pic_answer2);
