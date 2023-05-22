@@ -882,3 +882,791 @@ Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
 Directory:	C:\Users\root\source\repos\Test001
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x3D18 (Main), GetLastError(): 13 (Недопустимые данные), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (24):
+
+     22:     txSetColor (TX_WHITE, 7);
+     23:     txRectangle (x, 320, x+200, 470);
+=>   24:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     25:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     26: }
+
+# 2 0x0041DECE in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (112):
+
+    110:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    111:         //Ответы
+=>  112:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    113:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    114:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 15:38:10, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 15:38:15
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x3DB4 (Main), GetLastError(): 13 (Недопустимые данные), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (24):
+
+     22:     txSetColor (TX_WHITE, 7);
+     23:     txRectangle (x, 320, x+200, 470);
+=>   24:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     25:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     26: }
+
+# 2 0x0041DEA7 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (111):
+
+    109:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    110:         //Ответы
+=>  111:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    112:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    113:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 15:40:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 15:40:34
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x92C (Main), GetLastError(): 13 (Недопустимые данные), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (24):
+
+     22:     txSetColor (TX_WHITE, 7);
+     23:     txRectangle (x, 320, x+200, 470);
+=>   24:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     25:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     26: }
+
+# 2 0x0041DEA7 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (112):
+
+    110:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    111:         //Ответы
+=>  112:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    113:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    114:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 15:43:18, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 15:43:22
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x2930 (Main), GetLastError(): 13 (Недопустимые данные), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (24):
+
+     22:     txSetColor (TX_WHITE, 7);
+     23:     txRectangle (x, 320, x+200, 470);
+=>   24:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     25:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     26: }
+
+# 2 0x0041DECB in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (112):
+
+    110:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    111:         //Ответы
+=>  112:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    113:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    114:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 15:44:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 15:44:34
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x3158 (Main), GetLastError(): 13 (Недопустимые данные), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (24):
+
+     22:     txSetColor (TX_WHITE, 7);
+     23:     txRectangle (x, 320, x+200, 470);
+=>   24:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     25:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     26: }
+
+# 2 0x0041DECB in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (112):
+
+    110:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    111:         //Ответы
+=>  112:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    113:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    114:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 15:44:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 15:45:21
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x4294 (Main), GetLastError(): 13 (Недопустимые данные), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (24):
+
+     22:     txSetColor (TX_WHITE, 7);
+     23:     txRectangle (x, 320, x+200, 470);
+=>   24:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     25:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     26: }
+
+# 2 0x0041DECB in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (112):
+
+    110:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    111:         //Ответы
+=>  112:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    113:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    114:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 15:44:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 15:47:28
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x3448 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (24):
+
+     22:     txSetColor (TX_WHITE, 7);
+     23:     txRectangle (x, 320, x+200, 470);
+=>   24:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     25:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     26: }
+
+# 2 0x0041DECB in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (112):
+
+    110:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    111:         //Ответы
+=>  112:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    113:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    114:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 15:44:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 15:51:55
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x2818 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (24):
+
+     22:     txSetColor (TX_WHITE, 7);
+     23:     txRectangle (x, 320, x+200, 470);
+=>   24:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     25:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     26: }
+
+# 2 0x0041DEA7 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (110):
+
+    108:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    109:         //Ответы
+=>  110:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    111:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    112:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 15:52:48, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 15:52:52
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x2CBC (Main), GetLastError(): 13 (Недопустимые данные), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (24):
+
+     22:     txSetColor (TX_WHITE, 7);
+     23:     txRectangle (x, 320, x+200, 470);
+=>   24:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     25:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     26: }
+
+# 2 0x0041DEA7 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (110):
+
+    108:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    109:         //Ответы
+=>  110:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    111:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    112:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 15:52:48, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 15:54:21
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x123C (Main), GetLastError(): 13 (Недопустимые данные), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (24):
+
+     22:     txSetColor (TX_WHITE, 7);
+     23:     txRectangle (x, 320, x+200, 470);
+=>   24:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     25:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     26: }
+
+# 2 0x0041DEA7 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (110):
+
+    108:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    109:         //Ответы
+=>  110:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    111:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    112:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 15:52:48, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 16:42:01
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x123C (Main), GetLastError(): 13 (Недопустимые данные), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (24):
+
+     22:     txSetColor (TX_WHITE, 7);
+     23:     txRectangle (x, 320, x+200, 470);
+=>   24:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     25:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     26: }
+
+# 2 0x0041DEE7 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (111):
+
+    109:         //Ответы
+    110:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+=>  111:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    112:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+    113: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 15:52:48, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 16:42:01
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0044261C в функции _M_is_leaked() в файле c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x02000003 в модуле C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x25D0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0044261C in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: _M_is_leaked() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x0047164B in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: swap() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x00478FC9 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: operator=() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0041D782 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (58):
+
+     56: 
+     57:         int pos1 = str.find(",", 0);
+=>   58:         quest[n].text_question = str.substr(0, pos1-0);
+     59: 
+     60:         int pos2 = str.find(",", pos1+1);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 17:20:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 17:20:50
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0044261C в функции _M_is_leaked() в файле c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x02000003 в модуле C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x25D0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0044261C in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: _M_is_leaked() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x0047164B in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: swap() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x00478FC9 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: operator=() at c:/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0041D782 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (58):
+
+     56: 
+     57:         int pos1 = str.find(",", 0);
+=>   58:         quest[n].text_question = str.substr(0, pos1-0);
+     59: 
+     60:         int pos2 = str.find(",", pos1+1);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 17:20:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 17:20:51
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x21B8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (23):
+
+     21:     txSetColor (TX_WHITE, 7);
+     22:     txRectangle (x, 320, x+200, 470);
+=>   23:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     24:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     25: }
+
+# 2 0x0041DE89 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (105):
+
+    103:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    104:         //Ответы
+=>  105:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    106:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    107:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 17:51:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 17:51:33
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x266C (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (23):
+
+     21:     txSetColor (TX_WHITE, 7);
+     22:     txRectangle (x, 320, x+200, 470);
+=>   23:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     24:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     25: }
+
+# 2 0x0041DE89 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (105):
+
+    103:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    104:         //Ответы
+=>  105:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    106:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    107:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 17:51:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 17:52:57
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe, файл: c:\codeblocks\mingw\include\txlib.h, строка: 13628, функция: bool {anonymous}::TX::txBitBlt(HDC, double, double, double, double, HDC, double, double, unsigned int),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400], Instance: 0x004F52FC (32-bit), Flags: CMdRe0, Thread: 0x41C4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00416F73 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: txBitBlt() at c:/codeblocks/mingw/include/txlib.h (13628)
+
+# 1 0x0041D466 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: drawAnswer() at C:/Users/root/source/repos/Test001/main.cpp (23):
+
+     21:     txSetColor (TX_WHITE, 7);
+     22:     txRectangle (x, 320, x+200, 470);
+=>   23:     txBitBlt(txDC(), x, 320, 200, 150, pic_answer);
+     24:     txDrawText  (x, 500, x+200, 550, text_answer.c_str());
+     25: }
+
+# 2 0x0041DE89 in C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe: main() at C:/Users/root/source/repos/Test001/main.cpp (105):
+
+    103:         txDrawText(0, 0, 800, 200, quest_buf.text_question.c_str());
+    104:         //Ответы
+=>  105:         drawAnswer( 50, quest_buf.pic_answer1, quest_buf.text_answer1);
+    106:         drawAnswer(300, quest_buf.pic_answer2, quest_buf.text_answer2);
+    107:         drawAnswer(550, quest_buf.pic_answer3, quest_buf.text_answer3);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-07-19 01:45:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\mingw\include\txlib.h
+Compiled:	May 22 2023 17:51:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	May 22 2023 17:54:52
+
+Run file:	C:\Users\root\source\repos\Test001\bin\Debug\Test001.exe
+Directory:	C:\Users\root\source\repos\Test001
+
+--------------------------------------------------
