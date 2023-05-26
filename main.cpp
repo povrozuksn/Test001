@@ -29,11 +29,17 @@ bool clickAnswer(int x)
     return(txMouseButtons()==1 && txMouseX()>x && txMouseX()<x+200 && txMouseY()>320 && txMouseY()<470);
 }
 
+string getPart(string str, int *pos2)
+{
+    int pos1 = *pos2 + 1;
+    *pos2 = str.find(",", pos1);
+    string Part = str.substr(pos1, *pos2-pos1);
+    return Part;
+}
+
 int main()
 {
-
 setlocale(LC_ALL, "Russian");
-
 txCreateWindow (800, 600);
 
     int kol_question;
@@ -51,39 +57,14 @@ txCreateWindow (800, 600);
     {
         getline(file, str);
         int pos2 = -1;
-        int pos1 = pos2 + 1;
-
-        pos2 = str.find(",", pos1);
-        quest[n].text_question = str.substr(pos1, pos2-pos1);
-
-        pos1 = pos2 + 1;
-        pos2 = str.find(",", pos1);
-        quest[n].right_answer = atoi((str.substr(pos1, pos2-pos1)).c_str());
-
-        pos1 = pos2 + 1;
-        pos2 = str.find(",", pos1);
-        quest[n].pic_answer1 = txLoadImage((str.substr(pos1, pos2-pos1)).c_str());
-
-        pos1 = pos2 + 1;
-        pos2 = str.find(",", pos1);
-        quest[n].text_answer1 = str.substr(pos1, pos2-pos1);
-
-        pos1 = pos2 + 1;
-        pos2 = str.find(",", pos1);
-        quest[n].pic_answer2 = txLoadImage((str.substr(pos1, pos2-pos1)).c_str());
-
-        pos1 = pos2 + 1;
-        pos2 = str.find(",", pos1);
-        quest[n].text_answer2 = str.substr(pos1, pos2-pos1);
-
-        pos1 = pos2 + 1;
-        pos2 = str.find(",", pos1);
-        quest[n].pic_answer3 = txLoadImage((str.substr(pos1, pos2-pos1)).c_str());
-
-        pos1 = pos2 + 1;
-        pos2 = str.find(",", pos1);
-        quest[n].text_answer3 = str.substr(pos1, pos2-pos1);
-
+        quest[n].text_question = getPart(str, &pos2);
+        quest[n].right_answer = atoi(getPart(str, &pos2).c_str());
+        quest[n].pic_answer1 = txLoadImage(getPart(str, &pos2).c_str());
+        quest[n].text_answer1 = getPart(str, &pos2);
+        quest[n].pic_answer2 = txLoadImage(getPart(str, &pos2).c_str());
+        quest[n].text_answer2 = getPart(str, &pos2);
+        quest[n].pic_answer3 = txLoadImage(getPart(str, &pos2).c_str());
+        quest[n].text_answer3 = getPart(str, &pos2);
         n++;
     }
 
@@ -143,6 +124,10 @@ txCreateWindow (800, 600);
     txDrawText(0, 0, 800, 400, "РЕЗУЛЬТАТ");
     sprintf(stroka, "Количество правильных ответов %d", kol_right_answer);
     txDrawText(0, 0, 800, 600, stroka);
+
+    if(kol_right_answer<=2) txDrawText(0, 200, 800, 600, "Ты двоечник");
+    else if(kol_right_answer>2 && kol_right_answer<=5) txDrawText(0, 200, 800, 600, "Ты норм");
+    else if(kol_right_answer>=6) txDrawText(0, 200, 800, 600, "Ты молодец");
 
     txDeleteDC (quest_buf.pic_answer1);
     txDeleteDC (quest_buf.pic_answer2);
